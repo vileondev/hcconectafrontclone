@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HC Conecta — Painel do Médico</title>
+  <link rel="stylesheet" href="medico.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">HC Conecta – Equipe Assistencial</div>
+  <div class="user-info">Dr(a). Silva</div>
+</header>
+
+<main class="container">
+  <section class="filters">
+    <input id="search" type="text" placeholder="Buscar paciente..." />
+    <select id="statusFilter">
+      <option value="all">Todos</option>
+      <option value="aguardando">Aguardando</option>
+      <option value="em-atendimento">Em atendimento</option>
+      <option value="concluido">Concluído</option>
+    </select>
+  </section>
+
+  <section id="patientsList" class="grid"></section>
+
+  <section id="patientDetail" class="detail" style="display:none;">
+    <button class="back-btn" onclick="backToList()">← Voltar</button>
+    <div id="detailContent"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>HC-UFPE • Projeto de Inovação — Protótipo MVP</small>
+</footer>
+
+<script src="medico.js"></script>
+</body>
+</html>

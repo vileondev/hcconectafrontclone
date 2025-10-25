@@ -1,0 +1,108 @@
+:root {
+  --blue: #0054A6;
+  --green: #4CAF50;
+  --yellow: #FFC107;
+  --gray: #F7F8FA;
+  --muted: #6b7280;
+  --shadow: 0 3px 10px rgba(0,0,0,0.08);
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  background: var(--gray);
+  color: #222;
+}
+
+.topbar {
+  background: var(--blue);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+
+.container { padding: 16px; max-width: 1000px; margin: 0 auto; }
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.filters input, .filters select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 15px;
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+  cursor: pointer;
+  transition: transform .1s;
+}
+.card:hover { transform: translateY(-2px); }
+
+.card .name { font-weight: 700; font-size: 16px; margin-bottom: 4px; }
+.card .status { font-size: 13px; color: var(--muted); }
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+.badge.aguardando { background: var(--yellow); }
+.badge.em-atendimento { background: var(--blue); }
+.badge.concluido { background: var(--green); }
+
+.detail {
+  background: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.table th, .table td {
+  border-bottom: 1px solid #eee;
+  padding: 8px;
+  text-align: left;
+}
+.table th { background: #f9fafb; }
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 20px;
+  padding: 10px;
+}
